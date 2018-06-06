@@ -15,6 +15,9 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 
+import { BoxDriverComponent } from '../components/box-driver/box-driver';
+
+
 
 @NgModule({
   declarations: [
@@ -24,6 +27,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
     TestPage,
     TabsPage,
+    BoxDriverComponent
    
   ],
   imports: [
@@ -38,6 +42,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
     TestPage, 
     TabsPage,
+    BoxDriverComponent
    
   ],
   providers: [
