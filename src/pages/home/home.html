@@ -1,17 +1,37 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title style="text-align: center">Rides</ion-title>
   </ion-navbar>
+ 
 </ion-header>
 
 <ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+    <ion-segment [(ngModel)]="SegmentDriver" color="primary" (ionChange)="segmentChanged($event)">
+        <ion-segment-button value="My-Pool">
+          My Pool
+        </ion-segment-button>
+
+        <ion-segment-button value="Pending">
+          Pending
+        </ion-segment-button>
+      </ion-segment>
+    
+  
+
+<ion-grid  [ngSwitch]="'SegmentDriver'" style="height:100%">
+  <ion-row justify-content-center align-items-center style="height:100%">
+      <ion-card>
+          <ion-card-content>
+            <ion-item style="text-align: center">
+                <p> You have no rides planned at the moment.</p>
+                <ion-icon  ios="ios-map" md="md-map" id="PictureNoRides"></ion-icon>
+                <p>create new trip</p>
+                <ion-icon name="add-circle" id="AddRides"></ion-icon>
+            </ion-item>   
+          </ion-card-content>
+        </ion-card>
+  </ion-row>
+</ion-grid>
+
+  
 </ion-content>
